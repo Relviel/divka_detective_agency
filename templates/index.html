@@ -1,0 +1,507 @@
+{% include 'header.html' %}
+    <!-- slider section -->
+    <section class=" slider_section ">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5 col-md-6">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Divka's <br/>
+                      Detective <br/>
+                      Agency
+                    </h1>
+                    <p>
+                      77 Years of glory, Our team of experts excel at assessing every aspect of risk your organization faces today, 
+                      designing the most effective solution for your needs, and delivering customized services and solutions to you 24/7.
+                      <b>Because your safety is our surety</b>
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        We Never Fall Asleep
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="{{ url_for('static', filename='images/mata.png')}}" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5 col-md-6">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Our Values <br/>
+                      Rectitude, Prudence, <br/>
+                      Transcendence
+                    </h1>
+                    <p>
+                      Our motto, "We never sleep", represents our core values of rectitude, prudence and transcendence, 
+                      which are affirmed in our work and woven into every client interaction.
+                      It reflects our commitment to These core values, representing the true spirit of our agents and
+                      are deliberately organized to serve as benchmarks and checkpoints by which all agents are measured.
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        We Never Sleep
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="{{ url_for('static', filename='images/mata.png')}}" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5 col-md-6">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Our Story <br/>
+                      We trace our roots <br/>
+                      back to 1945
+                    </h1>
+                    <p>
+                      Risk management and security is not just what we do, it is our calling.
+                      we combine our 77 years of legacy and institutional knowledge with technology 
+                      informed by our expertise to protect and create value for our clients 
+                      across the globe. From brains to boots, we purposefully infuse rectitude, prudence and transcendence into our work.
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        We Never Sleep
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="{{ url_for('static', filename='images/mata.png')}}" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-container">
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- welcome section -->
+  <section class="welcome_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Welcome To Our Company
+        </h2>
+      </div>
+      <div class="layout_padding2">
+        <div class="img-box">
+          <img src="{{ url_for('static', filename='images/agents.png')}}" alt=""/>
+        </div>
+        <div class="detail-box">
+          <p>
+            Throughout our history, we have served as guardians and protectors of organizations around the world, 
+            defining new industry standards for comprehensive risk management, and consistently revolutionizing our industry.
+            Our connected network of resources allows us to learn, anticipate, 
+            and deliver new and specialized solutions that span the spectrum of our clients' needs, from strategy to implementation. 
+            No matter when, no matter where, we pride ourselves on being there for you.
+            Being a Divka's Detective Agency agent means we are your trusted partner. Because at Divka's Detective Agency, 
+            <b>we never sleep.</b>
+          </p>
+          <div>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end welcome section -->
+
+  <!-- service section -->
+
+  <section class="service_section">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Our Services
+        </h2>
+      </div>
+      <div class="service_container layout_padding2">
+        {% for services in fileData %}
+        <div class="service_box">
+          {% if services["ID"] == 1 %}
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/advisor.png')}}" alt=""/>
+          </div>
+          {% endif %}
+        {% if services["ID"] == 2 %}
+          <div class="img-box">
+            <img src="{{ url_for('static',filename='images/watson_amelia.png') }}" alt=""/>
+          </div>
+        {% endif %}
+        {% if services["ID"] == 3 %}
+          <div class="img-box">
+            <img src="{{ url_for('static',filename='images/Bodyguard.png') }}" alt=""/>
+          </div>
+        {% endif %}
+      <div class="detail-box">
+          <h4>
+            {{services["BUSINESS"]}}
+          </h4>
+          <p>
+            {{services["DESCRIPTION"]}}
+          </p>
+          <p style="font-size:10px;margin-top:-5px;">Agent:</p><br>
+          <p style="font-size:10px;margin-top:-35px!important;">{{services["AGENT"][0]["FIRSTNAME"]}}&nbsp;{{services["AGENT"][0]["LASTNAME"]}}</p><br>
+          <p style="font-size:10px;margin-top:-35px!important;">{{services["AGENT"][1]["FIRSTNAME"]}}&nbsp;{{services["AGENT"][1]["LASTNAME"]}}</p>
+        </div>
+      </div>
+      {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end service section -->
+  
+  <!--problem section -->
+  <section class="problem_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Do you have any security issues ?
+        </h2>
+      </div>
+      <div class="layout_padding2">
+        <div class="img-box">
+          <img src="{{ url_for('static', filename='images/trouble.jpg')}}" alt=""/>
+        </div>
+        <div class="detail-box">
+          <p>
+            Thinking of improving your house and property security? Looking for the right solution for your company? 
+            Ensuring your family and personal safety? Reach out for our Risk Advisor today.
+          </p>
+          <div>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end problem section -->
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Why Choose Us
+        </h2>
+      </div>
+      <div class="content-container">
+        <p>
+          Divka's Detective Agency takes pride in our 77+ years of accomplishment and succesful track records. 
+          We offer effective, comprehensive solutions for your risk advisory, protection, and investigation needs.
+        </p>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/smiley.png')}}" alt=""/>
+            </div>
+            <div class="detail-box">
+              <h3>
+                99%
+              </h3>
+              <h6>
+                SATISFIED Clients
+              </h6>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/monitor.png')}}" alt=""/>
+            </div>
+            <div class="detail-box">
+              <h3>
+                77 YEARS
+              </h3>
+              <h6>
+                DISTINGUISHED History
+              </h6>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/multiple-users-silhouette.png')}}" alt=""/>
+            </div>
+            <div class="detail-box">
+              <h3>
+                GUARANTEED
+              </h3>
+              <h6>
+                CLIENT Discretion
+              </h6>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/bar-chart.png')}}" alt=""/>
+            </div>
+            <div class="detail-box">
+              <h3>
+                50000+
+              </h3>
+              <h6>
+                SUCCESFUL Mission
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end why section -->
+
+  <!-- client section -->
+  <section class="client_section layout_padding">
+    <div class="container">
+      <h2>
+        What Our Clients Says
+      </h2>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_container layout_padding2">
+              <div class="client_text">
+                <p>
+                  Efficient, Quick, and Clean. I must say these guys know what are they doing. The police has received a lot of 
+                  help
+                  from Divka's Detective Agency. As a police inspector myself, I have work several cases with Divka's agents
+                  with satisfying result.
+                </p>
+              </div>
+              <div class="detail-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/Detective.jpg')}}" alt=""/>
+                </div>
+                <div class="name">
+                  <h5>
+                    Timmy Turner
+                  </h5>
+                  <p>
+                    Police Inspector
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding2">
+              <div class="client_text">
+                <p>
+                  I have been working with my partner for almost 50 years with no issues until one day I realize 
+                  that 
+                  the company's financial report doesn't add up. Fearing for the worst, I contacted Divka's Detective 
+                  Agency to find out what is going on.
+                  To my suprise, my so-called partner has been cheating for years and embezzled company's fund these past decade.
+                  If it weren't for Divka's Detective Agency, I don't know what I'm gonna do.
+                </p>
+              </div>
+              <div class="detail-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/Detective.jpg')}}" alt=""/>
+                </div>
+                <div class="name">
+                  <h5>
+                    Joe Hisaishi
+                  </h5>
+                  <p>
+                    Businessman
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding2">
+              <div class="client_text">
+                <p>
+                  At first I was nervous about contacting a Private Detective Agency but these guys were great.
+                  They were professional, thorough and fairly priced. I would highly recommend them to anyone.
+                  The evidence they provided is more than enough for me to divorce my cheating husband, here's to moving on.
+                </p>
+              </div>
+              <div class="detail-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/Detective.jpg')}}" alt=""/>
+                </div>
+                <div class="name">
+                  <h5>
+                    Mabel Pines
+                  </h5>
+                  <p>
+                    Auteur
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- end client section -->
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container contact_heading">
+      <h2>
+        Contact Us
+      </h2>
+      <p>
+        Get in touch with us. Explore innovative crime reporting with Divka's Detective Agency
+      </p>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName4">Name</label>
+            <input type="text" class="form-control" id="inputName4"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4"/>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputNumber4">Phone number</label>
+            <input type="tel" class="form-control" id="inputNumber4"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState">Select Service</label>
+            <select id="inputState" class="form-control">
+              <option selected=""></option>
+              <option>Consult a Risk Advisor</option>
+              <option>Consult an Investigator</option>
+              <option>Consult a Protection Service</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <input type="text" class="form-control" id="inputMessage" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="">Send</button>
+    </div>
+    </form>
+    
+  </section>
+
+
+  <!-- end contact section -->
+  <div class="footer_bg">
+    <!-- info section -->
+    <section class="info_section layout_padding2-bottom">
+     <div class="container">
+       <h3 class="">
+         Divka's Detective Agency
+         <h4 style="color: rgb(0, 0, 0) ;">
+           <b>We Never Sleep</b>
+         </h4>
+       </h3>
+     </div>
+     <div class="container info_content">
+
+      <div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+        <div class="social-box">
+          <a href="">
+            <img src="{{ url_for('static', filename='images/fb.png')}}" alt=""/>
+          </a>
+          <a href="">
+            <img src="{{ url_for('static', filename='images/twitter.png')}}" alt=""/>
+          </a>
+          <a href="">
+            <img src="{{ url_for('static', filename='images/linkedin1.png')}}" alt=""/>
+          </a>
+          <a href="">
+            <img src="{{ url_for('static', filename='images/instagram1.png')}}" alt=""/>
+          </a>
+        </div>
+        <div class="form_container mt-5">
+          <form action="">
+            <label for="subscribeMail">
+              Newsletter
+            </label>
+            <input type="email" placeholder="Enter Your email" id="subscribeMail"/>
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+   <!-- end info_section -->
+{% include 'footer.html' %}

@@ -1,0 +1,47 @@
+[
+    {
+      "ID": 1,
+      "BUSINESS": "Risk Advisory",
+      "AGENT": [
+        {
+          "FIRSTNAME": "Aline",
+          "LASTNAME": "Haiden"
+        },
+        {
+          "FIRSTNAME": "Rachel",
+          "LASTNAME": "Roth"
+        }
+      ],
+      "DESCRIPTION": "is a professional who work with organizations to help them manage risk. They may provide advice on how to reduce the likelihood of a negative event occurring, or they may help an organization develop plans for responding to such events if they do occur."
+    },
+    {
+        "ID": 2,
+        "BUSINESS": "Investigations",
+        "AGENT": [
+          {
+            "FIRSTNAME": "Richard",
+            "LASTNAME": "Grayson"
+          },
+          {
+            "FIRSTNAME": "Mikron",
+            "LASTNAME": "Jeneus"
+          }
+        ],
+        "DESCRIPTION": "Our investigators search for information about legal, financial, and personal matters. They offer many services, such as verifying company, organization, and people's backgrounds & statements, finding missing persons, and investigating computer crimes."
+      },
+      {
+        "ID": 3,
+        "BUSINESS": "Protection",
+        "AGENT": [
+          {
+            "FIRSTNAME": "Victor",
+            "LASTNAME": "Stone"
+          },
+          {
+            "FIRSTNAME": "Tara",
+            "LASTNAME": "Markov"
+          }
+        ],
+        "DESCRIPTION": "For over 170 years, our highly trained agents have provided protection to clients around the world. Incident response to unforeseen emergencies, planning for future events, embedding security teams, and more. We are here to guide and support."
+      }
+  ]

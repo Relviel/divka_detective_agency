@@ -1,0 +1,89 @@
+{% include 'header.html' %}
+
+<audio controls="true">
+  <source src="{{url_for('static', filename='music/Everybody_wants_to_rule_the_world.mp3')}}" type="audio/mp3"/>
+</audio>
+
+
+<body class="sub_page">
+  <!-- welcome section -->
+  <section class="welcome_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h1>
+          About Us
+        </h1>
+      </div>
+      <div class="layout_padding2">
+        <div class="img-box">
+          <img src="https://imageservice.sky.com/contentid/A5EK7jm4V169i7evFt7Gh/LAND_16_9?territory=GB&language=eng" alt=""/>
+        </div>
+        <div class="detail-box">
+          <p style="color:rgb(255, 255, 255);">Halo! Nama saya Cyborg dan gadis cantik di sebelah saya ini adalah pacar saya, Jinx. Kami adalah <i>couple</i> paling romantis
+            di seluruh Jump City. 
+            <i>By the way</i>, website ini dibuat oleh teman saya Divka. Dia sangat tampan, mari gadis-gadis
+            merapat dia masih single.
+            Oke itu aja, selamat datang di website kami!
+          </p>
+          <div>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end welcome section -->
+  <div class="footer_bg">
+     <!-- info section -->
+     <section class="info_section layout_padding2-bottom">
+      <div class="container">
+        <h3 class="">
+          Divka's Detective Agency
+          <h4 style="color: rgb(0, 0, 0) ;">
+            <b>We Never Sleep</b>
+          </h4>
+        </h3>
+      </div>
+      <div class="container info_content">
+
+        <div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+          <div class="social-box">
+            <a href="">
+              <img src="{{ url_for('static', filename='images/fb.png')}}" alt=""/>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static', filename='images/twitter.png')}}" alt=""/>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static', filename='images/linkedin1.png')}}" alt=""/>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static', filename='images/instagram1.png')}}" alt=""/>
+            </a>
+          </div>
+          <div class="form_container mt-5">
+            <form action="">
+              <label for="subscribeMail">
+                Newsletter
+              </label>
+              <input type="email" placeholder="Enter Your email" id="subscribeMail"/>
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end info_section -->
+{% include 'footer.html' %}
